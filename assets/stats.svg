@@ -1,16 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="850" height="177" viewBox="0 0 850 177" role="img"><rect width="100%" height="100%" rx="10" fill="#1F222E" /><rect x=".5" y=".5" width="99.9%" height="99%" rx="10" fill="none" stroke="#363B4A" stroke-width="1" />
-<text x="23" y="31" fill="#F75C7E" font-size="20" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">GitHub Profile Stats</text>
-<rect x="26" y="51" width="192" height="99" rx="7" fill="#272D3B"/>
-<text x="39" y="77" fill="#9EA8BA" font-size="10" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">PUBLIC REPOSITORIES</text>
-<text x="39" y="122" fill="#E9EDF5" font-size="33" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">—</text>
-<rect x="238" y="51" width="192" height="99" rx="7" fill="#272D3B"/>
-<text x="251" y="77" fill="#9EA8BA" font-size="10" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">TOTAL STARS</text>
-<text x="251" y="122" fill="#E9EDF5" font-size="33" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">—</text>
-<rect x="450" y="51" width="192" height="99" rx="7" fill="#272D3B"/>
-<text x="463" y="77" fill="#9EA8BA" font-size="10" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">FOLLOWERS</text>
-<text x="463" y="122" fill="#E9EDF5" font-size="33" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">—</text>
-<rect x="662" y="51" width="192" height="99" rx="7" fill="#272D3B"/>
-<text x="675" y="77" fill="#9EA8BA" font-size="10" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">CONTRIBUTIONS (YEAR)</text>
-<text x="675" y="122" fill="#E9EDF5" font-size="33" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">—</text>
-<text x="26" y="168" fill="#9EA8BA" font-size="10" font-weight="normal" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Run the included GitHub Actions workflow to show your real stats.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="748" height="207" viewBox="0 0 748 207" role="img">
+<defs>
+<linearGradient id="panel-stats" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#1D2430"/><stop offset="100%" stop-color="#161B22"/>
+</linearGradient>
+<linearGradient id="accent-stats" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#FF638B"/><stop offset="100%" stop-color="#C76DAF"/>
+</linearGradient>
+</defs>
+<rect x="0.75" y="0.75" width="746.5" height="205.5" rx="15" fill="url(#panel-stats)" stroke="#303847" stroke-width="1.5"/>
+<text x="23" y="34" fill="#F0F3F8" font-size="20" font-weight="700" text-anchor="start" font-family="Segoe UI, Inter, Arial, sans-serif">GitHub overview</text>
+<circle cx="588" cy="28" r="4.5" fill="#75849B"/>
+<text x="724" y="32" fill="#94A3B8" font-size="10" font-weight="600" text-anchor="end" letter-spacing="0.8" font-family="Segoe UI, Inter, Arial, sans-serif">AWAITING FIRST SYNC</text>
+<path d="M23 53 H725" stroke="#303847" stroke-width="1"/>
+<rect x="22" y="71" width="166" height="104" rx="11" fill="#242D3B"/>
+<rect x="36" y="88" width="21" height="3" rx="1.5" fill="#FF638B" opacity="0.85"/>
+<text x="36" y="109" fill="#94A3B8" font-size="9.6" font-weight="700" text-anchor="start" letter-spacing="0.5" font-family="Segoe UI, Inter, Arial, sans-serif">REPOSITORIES</text>
+<text x="36" y="152" fill="#F0F3F8" font-size="31" font-weight="700" text-anchor="start" font-family="Segoe UI, Inter, Arial, sans-serif">—</text>
+<rect x="202" y="71" width="166" height="104" rx="11" fill="#242D3B"/>
+<rect x="216" y="88" width="21" height="3" rx="1.5" fill="#FF638B" opacity="0.85"/>
+<text x="216" y="109" fill="#94A3B8" font-size="9.6" font-weight="700" text-anchor="start" letter-spacing="0.5" font-family="Segoe UI, Inter, Arial, sans-serif">TOTAL STARS</text>
+<text x="216" y="152" fill="#F0F3F8" font-size="31" font-weight="700" text-anchor="start" font-family="Segoe UI, Inter, Arial, sans-serif">—</text>
+<rect x="382" y="71" width="166" height="104" rx="11" fill="#242D3B"/>
+<rect x="396" y="88" width="21" height="3" rx="1.5" fill="#FF638B" opacity="0.85"/>
+<text x="396" y="109" fill="#94A3B8" font-size="9.6" font-weight="700" text-anchor="start" letter-spacing="0.5" font-family="Segoe UI, Inter, Arial, sans-serif">FOLLOWERS</text>
+<text x="396" y="152" fill="#F0F3F8" font-size="31" font-weight="700" text-anchor="start" font-family="Segoe UI, Inter, Arial, sans-serif">—</text>
+<rect x="562" y="71" width="166" height="104" rx="11" fill="#242D3B"/>
+<rect x="576" y="88" width="21" height="3" rx="1.5" fill="#FF638B" opacity="0.85"/>
+<text x="576" y="109" fill="#94A3B8" font-size="9.6" font-weight="700" text-anchor="start" letter-spacing="0.5" font-family="Segoe UI, Inter, Arial, sans-serif">CONTRIBUTIONS</text>
+<text x="576" y="152" fill="#F0F3F8" font-size="31" font-weight="700" text-anchor="start" font-family="Segoe UI, Inter, Arial, sans-serif">—</text>
+<text x="23" y="194" fill="#94A3B8" font-size="10.5" font-weight="400" text-anchor="start" font-family="Segoe UI, Inter, Arial, sans-serif">Metrics appear after the included GitHub Actions workflow runs</text>
 </svg>
