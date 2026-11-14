@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="177" viewBox="0 0 850 177" role="img"><rect width="100%" height="100%" rx="10" fill="#1F222E" /><rect x=".5" y=".5" width="99.9%" height="99%" rx="10" fill="none" stroke="#363B4A" stroke-width="1" />
+<text x="23" y="31" fill="#F75C7E" font-size="20" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">GitHub Profile Stats</text>
+<rect x="26" y="51" width="192" height="99" rx="7" fill="#272D3B"/>
+<text x="39" y="77" fill="#9EA8BA" font-size="10" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">PUBLIC REPOSITORIES</text>
+<text x="39" y="122" fill="#E9EDF5" font-size="33" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">—</text>
+<rect x="238" y="51" width="192" height="99" rx="7" fill="#272D3B"/>
+<text x="251" y="77" fill="#9EA8BA" font-size="10" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">TOTAL STARS</text>
+<text x="251" y="122" fill="#E9EDF5" font-size="33" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">—</text>
+<rect x="450" y="51" width="192" height="99" rx="7" fill="#272D3B"/>
+<text x="463" y="77" fill="#9EA8BA" font-size="10" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">FOLLOWERS</text>
+<text x="463" y="122" fill="#E9EDF5" font-size="33" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">—</text>
+<rect x="662" y="51" width="192" height="99" rx="7" fill="#272D3B"/>
+<text x="675" y="77" fill="#9EA8BA" font-size="10" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">CONTRIBUTIONS (YEAR)</text>
+<text x="675" y="122" fill="#E9EDF5" font-size="33" font-weight="bold" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">—</text>
+<text x="26" y="168" fill="#9EA8BA" font-size="10" font-weight="normal" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Run the included GitHub Actions workflow to show your real stats.</text>
+</svg>
