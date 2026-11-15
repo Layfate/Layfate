@@ -11,9 +11,7 @@
 
 <br />
 
-<img src="assets/brand/typing.gif" width="480" alt="Software Developer · Game Developer · Open-Source Creator · Always learning new things" />
-
-<p><strong>AI Engineer</strong></p>
+<img src="assets/brand/typing.gif" width="480" alt="Software Developer · Game Developer · AI Engineer · Open-Source Creator · Always learning new things" />
 
 <p align="center">
   <a href="YOUR_LINKEDIN_URL"><img src="assets/social/linkedin.svg" width="34" height="34" alt="LinkedIn — Zense" title="LinkedIn: Zense" /></a>
@@ -58,6 +56,7 @@
   <img alt="D3.js" src="https://img.shields.io/badge/D3.js-F9A03C?style=flat-square&logo=d3&logoColor=black" />
   <img alt="Ionic" src="https://img.shields.io/badge/Ionic-3880FF?style=flat-square&logo=ionic&logoColor=white" />
   <img alt="React Native" src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+  <img alt="Tauri" src="https://img.shields.io/badge/Tauri-24C8D8?style=flat-square&logo=tauri&logoColor=black" />
   <img alt="Roblox Studio" src="https://img.shields.io/badge/Roblox_Studio-111111?style=flat-square&logo=robloxstudio&logoColor=white" />
   <img alt="Unity" src="https://img.shields.io/badge/Unity-000000?style=flat-square&logo=unity&logoColor=white" />
   <img alt="Godot" src="https://img.shields.io/badge/Godot-478CBF?style=flat-square&logo=godotengine&logoColor=white" />
