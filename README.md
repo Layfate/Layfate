@@ -13,6 +13,8 @@
 
 <img src="assets/brand/typing.gif" width="480" alt="Software Developer · Game Developer · Open-Source Creator · Always learning new things" />
 
+<p><strong>AI Engineer</strong></p>
+
 <p align="center">
   <a href="YOUR_LINKEDIN_URL"><img src="assets/social/linkedin.svg" width="34" height="34" alt="LinkedIn — Zense" title="LinkedIn: Zense" /></a>
   &nbsp;&nbsp;&nbsp;&nbsp;
@@ -89,6 +91,7 @@
   <img alt="Visual Studio" src="https://img.shields.io/badge/Visual_Studio-5C2D91?style=flat-square&logo=visualstudio&logoColor=white" />
   <img alt="Figma" src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white" />
   <img alt="Photoshop" src="https://img.shields.io/badge/Photoshop-31A8FF?style=flat-square&logo=adobephotoshop&logoColor=black" />
+  <img alt="Aseprite" src="https://img.shields.io/badge/Aseprite-7D929E?style=flat-square&logo=aseprite&logoColor=white" />
   <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
   <img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
   <img alt="Android Studio" src="https://img.shields.io/badge/Android_Studio-3DDC84?style=flat-square&logo=androidstudio&logoColor=black" />
