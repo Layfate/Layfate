@@ -102,4 +102,4 @@
 
 You can reach me via any of my emails:
 
-<img src="assets/github-emails-doodle-compact.png" width="350" alt="Email: ackdefa@gmail.com and layfate@proton.me" />
+<img src="assets/github-emails-doodle-centered.png" width="350" alt="Email: ackdefa@gmail.com and layfate@proton.me" />
