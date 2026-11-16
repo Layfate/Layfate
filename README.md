@@ -97,3 +97,9 @@
 </p>
 
 </details>
+
+## Contact 📫
+
+You can reach me via any of my emails:
+
+<img src="assets/github-emails-doodle.png" width="600" alt="Email: ackdefa@gmail.com and layfate@proton.me" />
