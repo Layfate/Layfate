@@ -11,7 +11,7 @@
 
 <br />
 
-<img src="assets/brand/typing.gif" width="480" alt="Software Engineer · Game Developer · AI Engineer · Always learning new things" />
+<img src="assets/brand/profile-typing.gif" width="480" alt="Software Engineer · Game Developer · AI Engineer · Always learning new things" />
 
 <p align="center">
   <a href="YOUR_LINKEDIN_URL"><img src="assets/social/linkedin.svg" width="34" height="34" alt="LinkedIn — Zense" title="LinkedIn: Zense" /></a>
