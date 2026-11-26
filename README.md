@@ -17,7 +17,7 @@
 </div>
 
 <details>
-<summary><h2><img src="assets/brand/favorite-tools-hammer.png" width="28" height="28" alt="" /> My Favorite Tools</h2></summary>
+<summary><h2><img src="assets/brand/favorite-tools-hammer-shine.gif" width="28" height="28" alt="" /> My Favorite Tools</h2></summary>
 
 
 ### 💻 Languages & Runtimes
