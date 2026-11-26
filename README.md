@@ -80,7 +80,6 @@
   <img alt="Vercel" src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" />
   <img alt="Cloudflare" src="https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white" />
   <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-  <img alt="Ansible" src="https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white" />
   <img alt="CircleCI" src="https://img.shields.io/badge/CircleCI-343434?style=flat-square&logo=circleci&logoColor=white" />
   <img alt="Supabase" src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=black" />
   <img alt="Firebase" src="https://img.shields.io/badge/Firebase-202124?style=flat-square&logo=firebase&logoColor=FFCA28" />
