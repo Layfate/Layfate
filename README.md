@@ -84,11 +84,6 @@
   <img alt="Supabase" src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=black" />
   <img alt="Firebase" src="https://img.shields.io/badge/Firebase-202124?style=flat-square&logo=firebase&logoColor=FFCA28" />
   <img alt="Neon" src="https://img.shields.io/badge/Neon-172B28?style=flat-square&logo=neon&logoColor=00E5A0" />
-  <img alt="MongoDB Atlas" src="https://img.shields.io/badge/MongoDB_Atlas-00684A?style=flat-square&logo=mongodb&logoColor=white" />
-  <img alt="Amazon DynamoDB" src="https://img.shields.io/badge/Amazon_DynamoDB-4D27AA?style=flat-square" />
-  <img alt="Google Cloud SQL" src="https://img.shields.io/badge/Google_Cloud_SQL-1967D2?style=flat-square&logo=googlecloud&logoColor=white" />
-  <img alt="Azure SQL Database" src="https://img.shields.io/badge/Azure_SQL_Database-0078D4?style=flat-square" />
-  <img alt="CockroachDB Cloud" src="https://img.shields.io/badge/CockroachDB_Cloud-6933FF?style=flat-square&logo=cockroachlabs&logoColor=white" />
   <img alt="PlanetScale" src="https://img.shields.io/badge/PlanetScale-000000?style=flat-square&logo=planetscale&logoColor=white" />
   <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
   <img alt="SQLite" src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" />
