@@ -9,7 +9,7 @@
 <p align="center">
   <img src="assets/social/linkedin.svg" width="34" height="34" alt="LinkedIn — Zense" title="LinkedIn: Zense" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://bsky.app/profile/aintzense.bsky.social"><img src="assets/social/bluesky-amber.svg" width="34" height="34" alt="Bluesky @aintzense.bsky.social" /></a>
+  <a href="https://bsky.app/profile/aintzense.bsky.social"><img src="assets/social/bluesky-amber-sparkle.gif" width="34" height="34" alt="Bluesky @aintzense.bsky.social" /></a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://buymeacoffee.com/zense"><img src="assets/social/coffee.svg" width="34" height="34" alt="Buy Me a Coffee" title="Buy Me a Coffee" /></a>
 </p>
