@@ -1,6 +1,6 @@
 // Regenerate: npm i simple-icons si9@npm:simple-icons@9.0.0 && node scripts/tools-marquee.js assets/tools/tools-marquee.svg
-// Generates assets/tools/tools-marquee.svg: four animated rows of tool logos (one per
-// category) scrolling left, each logo popping a tooltip as it passes the centre.
+// Generates assets/tools/tools-marquee.svg: four rows of tool logos (one per category)
+// scrolling left, with each tool name printed under its logo.
 const fs = require('fs');
 const path = require('path');
 const si = Object.values(require('simple-icons'));
@@ -64,101 +64,74 @@ for (const [cat, list] of Object.entries(groups)) {
 }
 
 // Geometry: four rows, one per category, each scrolling left on its own loop.
+// Kept deliberately cheap to paint (no filters, masks or per-logo animations):
+// only one transform per row animates, so browsers redraw at the display's
+// full refresh rate (60/120/144 Hz).
 const W = 900;
-const TILE = 56, PITCH = 76, ICON = 30, POP = 1.14;
-const ROW_H = 110, TOP = 14, CY = 66;  // tile centre sits CY below the row top
-const H = TOP * 2 + ROW_H * 4 - 18;
-const C = W / 2;                      // spotlight x
-const SPEEDS = [38, 32, 36, 30];      // px per second, per row
+const TILE = 56, PITCH = 96, ICON = 30;
+const ROW_H = 124, TOP = 14, CY = 64;   // tile centre sits CY below the row top
+const NAME_Y = CY + TILE / 2 + 18;      // name baseline below the tile
+const H = TOP * 2 + ROW_H * 4 - 12;
+const BG = '#0D1117';
+const SPEEDS = [40, 34, 38, 32];        // px per second, per row
 const LABELS = ['Languages & Runtimes', 'Frameworks & Game Engines', 'Cloud, Databases & DevOps', 'Development & Design Tools'];
-const r = (n) => +n.toFixed(3);
 const FONT = `'Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif`;
 
 tools.forEach((t, i) => { t.idx = i; });
 const rows = Object.keys(groups).map((cat, k) => {
   const list = tools.filter((t) => t.cat === cat);
   const loop = list.length * PITCH;
-  return { k, list, loop, T: +(loop / SPEEDS[k]).toFixed(2), win: PITCH / loop,
+  return { k, list, loop, T: +(loop / SPEEDS[k]).toFixed(2),
     copies: Math.ceil((W + PITCH) / loop) + 1, y0: TOP + k * ROW_H };
 });
 
-const tipFor = (t) => {
-  const bw = Math.max(t.name.length * 7.8 + 24, 60), bh = 26, top = -TILE / 2 - 10 - bh;
-  return `<g class="tip">` +
-    `<rect x="${r(-bw / 2)}" y="${top}" width="${r(bw)}" height="${bh}" rx="8" fill="url(#tipFill)"/>` +
-    `<path d="M-6 ${top + bh - 0.5}h12l-6 6z" fill="#EDA93F"/>` +
-    `<text y="${top + 17.5}" class="tn">${esc(t.name)}</text></g>`;
-};
-
-const tile = (row, t, i, copy) => {
-  const x0 = PITCH / 2 + i * PITCH;
-  const x = x0 + copy * row.loop;
-  // Fraction of the cycle at which this tile's centre reaches the spotlight.
-  const phase = ((((x0 - C) / row.loop) % 1) + 1) % 1;
-  const start = (phase - row.win / 2 + 1) % 1;
-  const delay = r(-((1 - start) % 1) * row.T);
+const tile = (row, t, x) => {
   const h = TILE / 2;
-  return `<g transform="translate(${x} ${row.y0 + CY})"><g class="t" style="animation-delay:${delay}s">` +
-    `<rect class="glow" x="${-h - 5}" y="${-h - 5}" width="${TILE + 10}" height="${TILE + 10}" rx="20" fill="#${t.color}"/>` +
-    `<rect x="${-h}" y="${-h}" width="${TILE}" height="${TILE}" rx="15" fill="#161B22" stroke="#${t.color}" stroke-opacity=".35" stroke-width="1.5"/>` +
-    `<rect class="ring" x="${-h}" y="${-h}" width="${TILE}" height="${TILE}" rx="15" fill="none" stroke="#${t.color}" stroke-width="2"/>` +
+  return `<g transform="translate(${x} ${row.y0 + CY})">` +
+    `<rect x="${-h}" y="${-h}" width="${TILE}" height="${TILE}" rx="15" fill="#161B22" stroke="#${t.color}" stroke-opacity=".45" stroke-width="1.5"/>` +
     `<use href="#i${t.idx}" x="${-ICON / 2}" y="${-ICON / 2}" width="${ICON}" height="${ICON}" fill="#${t.color}"/>` +
-    tipFor(t) + `</g></g>`;
-};
-
-const rowCss = (row) => {
-  const a = r(row.win * 18), b = r(row.win * 82), c = r(row.win * 100), k = row.k;
-  return `.r${k} .strip{animation:scroll${k} ${row.T}s linear infinite}
-.r${k} .t{animation:pop${k} ${row.T}s linear infinite}
-.r${k} .t .tip,.r${k} .t .ring{animation-name:show${k}}
-.r${k} .t .glow{animation-name:glow${k}}
-@keyframes scroll${k}{from{transform:translateX(0)}to{transform:translateX(-${row.loop}px)}}
-@keyframes pop${k}{0%{transform:scale(1)}${a}%,${b}%{transform:scale(${POP})}${c}%,100%{transform:scale(1)}}
-@keyframes show${k}{0%{opacity:0}${a}%,${b}%{opacity:1}${c}%,100%{opacity:0}}
-@keyframes glow${k}{0%{opacity:0}${a}%,${b}%{opacity:.45}${c}%,100%{opacity:0}}`;
+    `<text y="${NAME_Y - CY}" class="nm">${esc(t.name)}</text></g>`;
 };
 
 const rowSvg = (row) => {
-  const label = LABELS[row.k];
   const tiles = [];
-  for (let copy = 0; copy < row.copies; copy++) row.list.forEach((t, i) => tiles.push(tile(row, t, i, copy)));
-  return `<g class="r${row.k}">
-<ellipse cx="${C}" cy="${row.y0 + CY}" rx="120" ry="52" fill="url(#spot)"/>
-<rect x="28" y="${row.y0 + 12}" width="3" height="12" rx="1.5" fill="#E9A23B"/>
-<text x="38" y="${row.y0 + 22}" class="lb">${esc(label.toUpperCase())}<tspan class="ct" dx="8">${row.list.length}</tspan></text>
-<g mask="url(#m)"><g class="strip">
+  for (let copy = 0; copy < row.copies; copy++) {
+    row.list.forEach((t, i) => tiles.push(tile(row, t, PITCH / 2 + i * PITCH + copy * row.loop)));
+  }
+  return `<g class="s s${row.k}">
 ${tiles.join('\n')}
-</g></g></g>`;
+</g>`;
 };
+
+const rowLabel = (row) => `<rect x="28" y="${row.y0 + 10}" width="3" height="12" rx="1.5" fill="#E9A23B"/>
+<text x="38" y="${row.y0 + 20}" class="lb">${esc(LABELS[row.k].toUpperCase())}<tspan class="ct" dx="8">${row.list.length}</tspan></text>`;
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="My favorite tools: ${esc(tools.map((t) => t.name).join(', '))}">
 <title>${esc(tools.map((t) => t.name).join(' · '))}</title>
 <style>
-.t{transform-box:fill-box;transform-origin:center}
-.t .tip,.t .ring,.t .glow{opacity:0;animation:inherit}
-.t .glow{filter:url(#blur)}
-.tn{font:700 13px ${FONT};fill:#1A1206;text-anchor:middle}
+.s{will-change:transform}
+${rows.map((row) => `.s${row.k}{animation:m${row.k} ${row.T}s linear infinite}
+@keyframes m${row.k}{from{transform:translate3d(0,0,0)}to{transform:translate3d(-${row.loop}px,0,0)}}`).join('\n')}
+.nm{font:600 11px ${FONT};fill:#9DA7B3;text-anchor:middle}
 .lb{font:700 11.5px ${FONT};fill:#E9A23B;letter-spacing:1.4px}
 .ct{font-size:11px;font-weight:600;fill:#6E7681;letter-spacing:0}
-${rows.map(rowCss).join('\n')}
-@media (prefers-reduced-motion:reduce){.strip,.t,.t .tip,.t .ring,.t .glow{animation:none!important}}
+@media (prefers-reduced-motion:reduce){.s{animation:none}}
 </style>
 <defs>
 ${tools.map((t, i) => `<symbol id="i${i}" viewBox="0 0 24 24"><path d="${t.path}"/></symbol>`).join('\n')}
-<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#11161D"/><stop offset="1" stop-color="#0B0F14"/></linearGradient>
 <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E9A23B" stop-opacity="0"/><stop offset=".5" stop-color="#E9A23B" stop-opacity=".7"/><stop offset="1" stop-color="#E9A23B" stop-opacity="0"/></linearGradient>
-<linearGradient id="tipFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC861"/><stop offset="1" stop-color="#EDA93F"/></linearGradient>
-<radialGradient id="spot" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#E9A23B" stop-opacity=".13"/><stop offset="1" stop-color="#E9A23B" stop-opacity="0"/></radialGradient>
-<linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".1" stop-color="#fff"/><stop offset=".9" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-<mask id="m" maskUnits="userSpaceOnUse" x="0" y="0" width="${W}" height="${H}"><rect width="${W}" height="${H}" fill="url(#fade)"/></mask>
+<linearGradient id="fl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${BG}"/><stop offset="1" stop-color="${BG}" stop-opacity="0"/></linearGradient>
+<linearGradient id="fr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${BG}" stop-opacity="0"/><stop offset="1" stop-color="${BG}"/></linearGradient>
 <clipPath id="card"><rect width="${W}" height="${H}" rx="20"/></clipPath>
-<filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
 </defs>
 <g clip-path="url(#card)">
-<rect width="${W}" height="${H}" fill="url(#bg)"/>
+<rect width="${W}" height="${H}" fill="${BG}"/>
+${rows.map(rowSvg).join('\n')}
+<rect x="0" y="0" width="90" height="${H}" fill="url(#fl)"/>
+<rect x="${W - 90}" y="0" width="90" height="${H}" fill="url(#fr)"/>
+${rows.map(rowLabel).join('\n')}
 <rect x="0" y="0" width="${W}" height="1.5" fill="url(#edge)"/>
 <rect x="0" y="${H - 1.5}" width="${W}" height="1.5" fill="url(#edge)"/>
-${rows.map(rowSvg).join('\n')}
 </g>
 <rect x=".75" y=".75" width="${W - 1.5}" height="${H - 1.5}" rx="19.5" fill="none" stroke="#30363D"/>
 </svg>
