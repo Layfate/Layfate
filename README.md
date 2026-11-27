@@ -21,7 +21,7 @@
 
 
 <p align="center">
-  <img src="assets/tools/tools-marquee.svg" width="900" alt="My favorite tools" title="Languages: Luau, Lua, Python, Rust, Zig, C#, TypeScript, JavaScript, HTML5, CSS3, SQL, Node.js, Go, Kotlin, Swift, Dart, C++&#10;Frameworks & Engines: Vue.js, React, Next.js, Svelte, SvelteKit, Astro, Tailwind CSS, React Native, Flutter, Tauri, Iced, FastAPI, NestJS, ASP.NET Core, Roblox Studio, Unity, Godot&#10;Cloud & DevOps: Azure, Google Cloud, Vercel, Cloudflare, Docker, Supabase, Firebase, Neon, PostgreSQL, SQLite&#10;Tools: VS Code, Visual Studio, Figma, Photoshop, Aseprite, Git, GitHub, Android Studio" />
+  <img src="assets/tools/tools-rows.svg" width="900" alt="My favorite tools" title="Languages: Luau, Lua, Python, Rust, Zig, C#, TypeScript, JavaScript, HTML5, CSS3, SQL, Node.js, Go, Kotlin, Swift, Dart, C++&#10;Frameworks & Engines: Vue.js, React, Next.js, Svelte, SvelteKit, Astro, Tailwind CSS, React Native, Flutter, Tauri, Iced, FastAPI, NestJS, ASP.NET Core, Roblox Studio, Unity, Godot&#10;Cloud & DevOps: Azure, Google Cloud, Vercel, Cloudflare, Docker, Supabase, Firebase, Neon, PostgreSQL, SQLite&#10;Tools: VS Code, Visual Studio, Figma, Photoshop, Aseprite, Git, GitHub, Android Studio" />
 </p>
 
 </details>

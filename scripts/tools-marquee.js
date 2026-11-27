@@ -1,5 +1,5 @@
-// Regenerate: npm i simple-icons si9@npm:simple-icons@9.0.0 && node scripts/tools-marquee.js assets/tools/tools-marquee.svg
-// Generates assets/tools/tools-marquee.svg: four rows of tool logos (one per category)
+// Regenerate: npm i simple-icons si9@npm:simple-icons@9.0.0 && node scripts/tools-marquee.js assets/tools/tools-rows.svg
+// Generates assets/tools/tools-rows.svg: four rows of tool logos (one per category)
 // scrolling left, with each tool name printed under its logo.
 const fs = require('fs');
 const path = require('path');
